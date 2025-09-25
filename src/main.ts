@@ -29,3 +29,17 @@ type Dipendente = {
   readonly emailAziendale: string;
   contratto: "indeterminato" | "determinato" | "freelance";
 };
+
+// Snack 3
+
+type Developer = Dipendente & {
+  livelloEsperienza: "junior" | "mid" | "senior";
+  linguaggi?: string[];
+  certificazioni: string[];
+};
+
+type ProjectManager = Developer & {
+  teamSize: number | null;
+  budgetGestito?: number;
+  stakeholderPrincipali: string[];
+};
