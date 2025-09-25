@@ -38,8 +38,15 @@ type Developer = Dipendente & {
   certificazioni: string[];
 };
 
-type ProjectManager = Developer & {
+type ProjectManager = Dipendente & {
   teamSize: number | null;
   budgetGestito?: number;
   stakeholderPrincipali: string[];
+};
+
+type Team = {
+  nome: string;
+  progettoattuale: string | null;
+  budget: number;
+  membri: [ProjectManager, Developer, ...Developer[]];
 };
