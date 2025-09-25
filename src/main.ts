@@ -1,1 +1,17 @@
-console.log("hello Word!");
+let value: unknown;
+
+if (typeof value === "string") {
+  console.log(value.toUpperCase());
+} else if (typeof value === "number") {
+  console.log(value * 2);
+} else if (typeof value === "boolean") {
+  console.log(value ? "si" : "no");
+} else if (value === null) {
+  console.log("il dato è vuoto");
+} else if (Array.isArray(value)) {
+  console.log(value.length);
+} else if (value instanceof Promise) {
+  value.then((mess) => console.log(mess));
+} else {
+  console.log("Tipo non supportato");
+}
