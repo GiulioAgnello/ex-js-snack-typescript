@@ -1,3 +1,5 @@
+// Sanck 1
+
 let value: unknown;
 
 if (typeof value === "string") {
@@ -15,3 +17,15 @@ if (typeof value === "string") {
 } else {
   console.log("Tipo non supportato");
 }
+
+// Sanck 2
+
+type Dipendente = {
+  nome: string;
+  cognome: string;
+  annoNascita: number;
+  sesso: "m" | "F";
+  anniDiServizio: number[];
+  readonly emailAziendale: string;
+  contratto: "indeterminato" | "determinato" | "freelance";
+};
